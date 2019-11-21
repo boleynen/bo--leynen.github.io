@@ -1,0 +1,300 @@
+/*  
+achtergrond: #C9C3C7
+geel: #E0C787
+wit stoel: #E5E4E4
+blauw stoel/tekst: #1A1D39
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    width: 449px;
+    height: 620px;
+    background-color: #C9C3C7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: color-background-anim 20s linear 23s infinite;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(29, 29, 29);
+}
+
+/*   H1 TITEL    */
+
+#h1_svg {
+    width: 60%;
+    margin: 24px 40px 0px 140px;
+    /* animation: color-anim 0.5s ease forwards 3.5s; */
+}
+
+
+
+#h1_svg path:nth-child(1) {
+    /* M  */
+    stroke-dasharray: 349.51px;
+    stroke-dashoffset: 349.51px;
+    animation: line-anim 5s ease forwards 2.4s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
+}
+
+#h1_svg path:nth-child(2) {
+    /* A  */
+    stroke-dasharray: 290.67px;
+    stroke-dashoffset: 290.67px;
+    animation: line-anim 7s ease forwards 1.3s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
+}
+
+#h1_svg path:nth-child(3) {
+    /* R  */
+    stroke-dasharray: 302.44px;
+    stroke-dashoffset: 302.44px;
+    animation: line-anim 3s ease forwards 2.7s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
+}
+
+#h1_svg path:nth-child(4) {
+    /* T  */
+    stroke-dasharray: 228.89px;
+    stroke-dashoffset: 228.89px;
+    animation: line-anim 4s ease forwards 4s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
+}
+
+#h1_svg path:nth-child(5) {
+    /* S  */
+    stroke-dasharray: 277.67px;
+    stroke-dashoffset: 277.67px;
+    animation: line-anim 7s ease forwards 4.2s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
+}
+
+#h1_svg path:nth-child(6) {
+    /* T  */
+    stroke-dasharray: 228.90px;
+    stroke-dashoffset: 228.90px;
+    animation: line-anim 5s ease forwards 1s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
+}
+
+#h1_svg path:nth-child(7) {
+    /* A  */
+    stroke-dasharray: 290.72px;
+    stroke-dashoffset: 290.72px;
+    animation: line-anim 7s ease forwards, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
+}
+
+#h1_svg path:nth-child(8) {
+    /* M  */
+    stroke-dasharray: 349.51px;
+    stroke-dashoffset: 349.51px;
+    animation: line-anim 4s ease forwards 2.1s, color-anim 1s ease forwards 15s;
+    /* , color-h1-anim 20s linear 23s infinite; */
+}
+
+
+
+/*   STOEL    */
+
+#chair_svg {
+    width: 55%;
+    margin: 65px 0px 0px 110px;
+}
+
+#chair_svg #bovenstuk_zitvlak {
+    /* M  */
+    stroke-dasharray: 861.36px;
+    stroke-dashoffset: 861.36px;
+    animation: line-anim 10s ease forwards 13s, color-anim 7s ease forwards 18s, color-chair-anim 20s linear 23s infinite;
+
+}
+
+#chair_svg #onderstuk_zitvlak {
+    /* A  */
+    stroke-dasharray: 1519.11px;
+    stroke-dashoffset: 1519.11px;
+    animation: line-anim 10s ease forwards 13s, color-anim 7s ease forwards 18s, color-chair-anim 20s linear 23s infinite;
+
+}
+
+#chair_svg .schaduw {
+    animation: appear-anim 8s ease forwards 18s, color-shadow-anim 20s linear 23s infinite;
+
+}
+
+
+/*   LIJN    */
+
+#line_svg {
+    z-index: -1;
+    top: 34px;
+    right: 0;
+    position: absolute;
+    width: 92.2%;
+}
+
+#line_svg polyline {
+    /* A  */
+    stroke-dasharray: 2439.87px;
+    stroke-dashoffset: 2439.87px;
+    animation: line-anim 12s ease-in-out forwards 5s, color-line-anim 20s linear 23s infinite;
+}
+
+/*   TEXT    */
+#small-text,
+#big-text {
+    font-family: awanzaman, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#small-text {
+    font-size: 20px;
+    transform: rotate(270deg);
+    z-index: 10;
+    position: absolute;
+    top: 150px;
+    line-height: 20px;
+}
+
+#big-text {
+    font-size: 15px;
+    width: 280px;
+    text-align: justify;
+    hyphens: auto;
+    line-height: 15px;
+    left: 40px;
+    position: absolute;
+    top: 480px;
+}
+
+
+
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes color-anim {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: #1A1D39;
+    }
+}
+
+@keyframes appear-anim {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: #1a1d39;
+    }
+}
+
+@keyframes color-chair-anim {
+    0% {
+        fill: #1a1d39;
+        stroke: #1a1d39;
+    }
+
+    33% {
+        fill: #AF6F6D;
+        stroke: #AF6F6D;
+    }
+
+    75% {
+        fill: #6A4394;
+        stroke: #6A4394;
+    }
+
+    100% {
+        fill: #1a1d39;
+        stroke: #1a1d39;
+    }
+}
+
+@keyframes color-line-anim {
+    0% {
+        stroke: #e0c787;
+    }
+
+    33% {
+        stroke: #8EC894;
+    }
+
+    75% {
+        stroke: #DD5536;
+    }
+
+    100% {
+        stroke: #e0c787;
+    }
+}
+
+@keyframes color-background-anim {
+    0% {
+        background-color: #C9C3C7;
+    }
+
+    33% {
+        background-color: #879EDD;
+    }
+
+    75% {
+        background-color: #e0c787;
+    }
+
+    100% {
+        background-color: #C9C3C7;
+    }
+}
+
+/* @keyframes color-h1-anim{
+    0% {
+        fill: #1B1D36;
+        stroke: #1B1D36;
+    }
+
+    33% {
+        fill: #E5E4E4;
+        stroke: #E5E4E4;
+    }
+
+    75% {
+        fill: #1B1D36;
+        stroke: #1B1D36;
+    }
+
+    100% {
+        fill: #1B1D36;
+        stroke: #1B1D36;
+    }
+} */
+
+@keyframes color-shadow-anim{
+    0% {
+        fill: #0B0D15;
+    }
+
+    33% {
+        fill: #422928;
+    }
+
+    75% {
+        fill: #251A33;
+    }
+
+    100% {
+        fill: #1B1D36;
+    }
+}
