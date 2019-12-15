@@ -6,6 +6,11 @@ blauw stoel/tekst: #1A1D39
 
 */
 
+@font-face{
+    font-family: gillsansbold; 
+    src: url(GILB____.TTF);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +25,7 @@ blauw stoel/tekst: #1A1D39
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: color-background-anim 20s linear 23s infinite;
+    animation: color-background-anim 20s linear 5s infinite;
 }
 
 body {
@@ -31,69 +36,13 @@ body {
 
 /*   H1 TITEL    */
 
-#h1_svg {
+h1 {
     width: 60%;
-    margin: 24px 40px 0px 140px;
+    margin: 4px 100px 0px 120px;
+    font-family: gillsansbold;
+    color: #1A1D39;
+    font-size: 3.5em;
     /* animation: color-anim 0.5s ease forwards 3.5s; */
-}
-
-
-
-#h1_svg path:nth-child(1) {
-    /* M  */
-    stroke-dasharray: 349.51px;
-    stroke-dashoffset: 349.51px;
-    animation: line-anim 5s ease forwards 2.4s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
-}
-
-#h1_svg path:nth-child(2) {
-    /* A  */
-    stroke-dasharray: 290.67px;
-    stroke-dashoffset: 290.67px;
-    animation: line-anim 7s ease forwards 1.3s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
-}
-
-#h1_svg path:nth-child(3) {
-    /* R  */
-    stroke-dasharray: 302.44px;
-    stroke-dashoffset: 302.44px;
-    animation: line-anim 3s ease forwards 2.7s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
-}
-
-#h1_svg path:nth-child(4) {
-    /* T  */
-    stroke-dasharray: 228.89px;
-    stroke-dashoffset: 228.89px;
-    animation: line-anim 4s ease forwards 4s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
-}
-
-#h1_svg path:nth-child(5) {
-    /* S  */
-    stroke-dasharray: 277.67px;
-    stroke-dashoffset: 277.67px;
-    animation: line-anim 7s ease forwards 4.2s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
-}
-
-#h1_svg path:nth-child(6) {
-    /* T  */
-    stroke-dasharray: 228.90px;
-    stroke-dashoffset: 228.90px;
-    animation: line-anim 5s ease forwards 1s, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
-}
-
-#h1_svg path:nth-child(7) {
-    /* A  */
-    stroke-dasharray: 290.72px;
-    stroke-dashoffset: 290.72px;
-    animation: line-anim 7s ease forwards, color-anim 1s ease forwards 15s, color-h1-anim 20s linear 23s infinite;
-}
-
-#h1_svg path:nth-child(8) {
-    /* M  */
-    stroke-dasharray: 349.51px;
-    stroke-dashoffset: 349.51px;
-    animation: line-anim 4s ease forwards 2.1s, color-anim 1s ease forwards 15s;
-    /* , color-h1-anim 20s linear 23s infinite; */
 }
 
 
@@ -109,7 +58,7 @@ body {
     /* M  */
     stroke-dasharray: 861.36px;
     stroke-dashoffset: 861.36px;
-    animation: line-anim 10s ease forwards 13s, color-anim 7s ease forwards 18s, color-chair-anim 20s linear 23s infinite;
+    animation: line-anim 5s ease forwards, color-anim 2s ease forwards 5s, color-chair-anim 20s linear 6s infinite;
 
 }
 
@@ -117,12 +66,12 @@ body {
     /* A  */
     stroke-dasharray: 1519.11px;
     stroke-dashoffset: 1519.11px;
-    animation: line-anim 10s ease forwards 13s, color-anim 7s ease forwards 18s, color-chair-anim 20s linear 23s infinite;
+    animation: line-anim 5s ease forwards, color-anim 2s ease forwards 5s, color-chair-anim 20s linear 6s infinite;
 
 }
 
 #chair_svg .schaduw {
-    animation: appear-anim 8s ease forwards 18s, color-shadow-anim 20s linear 23s infinite;
+    animation: appear-anim 4s ease forwards 5s, color-shadow-anim 20s linear 5s infinite;
 
 }
 
@@ -136,13 +85,12 @@ body {
     position: absolute;
     width: 92.2%;
 }
+#line_svg .cls-1b{
+    animation: color-line-anim 20s linear 5s infinite;
 
-#line_svg polyline {
-    /* A  */
-    stroke-dasharray: 2439.87px;
-    stroke-dashoffset: 2439.87px;
-    animation: line-anim 12s ease-in-out forwards 5s, color-line-anim 20s linear 23s infinite;
 }
+
+
 
 /*   TEXT    */
 #small-text,
